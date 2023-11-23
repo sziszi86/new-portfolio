@@ -1,0 +1,56 @@
+// Lightbox.scss
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  z-index: 999999;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.lightbox-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+  margin: 0 10px;
+
+  h2 {
+    color: #333;
+  }
+
+  p {
+    color: #666;
+  }
+
+  button {
+    background: orange;
+    color: #0c0c1d;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
